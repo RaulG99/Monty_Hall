@@ -25,8 +25,9 @@ while(i<n):
     select = random.randint(0,2) #Player selects a random door
     select_door = doors[select]
     
-    opening_opts = list(set(doors) - set(car_door+select_door)) #possible doors to open such that its not the car-door or the player selected door
+    opening_opts = list(set(doors) - set([car_door,select_door])) #possible doors to open such that its not the car-door or the player selected door
     opening = opening_opts[random.randint(0,len(opening_opts)-1)] #opening one dud-door
+    print(opening_opts)
     
     #which option wins?
     if(car == select):
@@ -39,4 +40,3 @@ while(i<n):
 win_p = stay_wins*100/n
 
 print("\nAfter ",n," iterations, percentage of Stay wins = ",win_p,"% and percentage of Switch wins = ",100-win_p,'%')  
-    
