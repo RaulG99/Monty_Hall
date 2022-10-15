@@ -8,7 +8,8 @@ while True:
     except ValueError:
         print("Please enter a valid positive integer: ")
         continue
-    if(n==0):
+    if(n<=0):
+        print("Please enter a valid positive integer: ")
         continue
     else:
         break
