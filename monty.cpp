@@ -25,7 +25,7 @@ int main()
         string player_door = Doors[rand()%3];
         
         //list of doors that can be opened without revealing car
-        string open_doors[3] = { "", "", "" };
+        string open_doors[2] = { "", ""};
         int t = 0;
         for(int k = 0; k<3; k++) {
             if(Doors[k].compare(car_door) && Doors[k].compare(player_door)) {
